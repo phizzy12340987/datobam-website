@@ -17,7 +17,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: "Segoe UI", Arial, sans-serif;
+font-family:"Segoe UI",sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -26,23 +26,21 @@ background:var(--dark);
 color:#fff;
 }
 
-/* ===== NAVBAR ===== */
+/* NAV */
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.8);
-backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 20px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-nav img{
-width:40px;
-}
+nav img{width:45px;}
 
 nav a{
 color:#fff;
@@ -51,7 +49,7 @@ text-decoration:none;
 font-size:14px;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -61,20 +59,21 @@ align-items:center;
 text-align:center;
 padding:20px;
 background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
-url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d');
+url('https://images.unsplash.com/photo-1520975922203-b0b2f5c9c3a1');
 background-size:cover;
-background-position:center;
 }
 
 .hero h1{
-font-size:36px;
+font-size:38px;
 color:var(--gold);
+animation:fadeUp 1s ease;
 }
 
 .hero p{
-max-width:400px;
-opacity:0.8;
-margin-top:10px;
+max-width:500px;
+opacity:0.9;
+margin-top:15px;
+animation:fadeUp 1.5s ease;
 }
 
 .btn{
@@ -86,11 +85,12 @@ border:none;
 border-radius:30px;
 font-weight:bold;
 cursor:pointer;
+animation:fadeUp 2s ease;
 }
 
-/* ===== SECTION ===== */
+/* SECTION */
 .section{
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
 }
 
@@ -100,76 +100,70 @@ margin-bottom:20px;
 font-size:26px;
 }
 
-/* ===== SERVICES ===== */
+/* SERVICES */
 .services{
 display:grid;
-gap:15px;
+gap:20px;
 }
 
 .card{
 background:var(--card);
-padding:20px;
+padding:25px;
 border-radius:10px;
 transition:0.3s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
 transform:translateY(-5px);
 }
 
-/* ===== GRID ===== */
-@media(min-width:768px){
-.services{
-grid-template-columns:1fr 1fr;
-}
-.hero h1{
-font-size:48px;
-}
-}
-
-/* ===== ABOUT ===== */
+/* ABOUT */
 .about{
 background:#020617;
 }
 
-/* ===== WHY ===== */
+/* WHY */
 .why{
 background:#020617;
 }
 
-.why-item{
-margin:10px 0;
-}
-
-/* ===== TESTIMONIAL ===== */
+/* TESTIMONIAL */
 .testimonial{
 background:var(--card);
 padding:20px;
 border-radius:10px;
-margin:10px 0;
-font-size:14px;
+margin:15px 0;
+opacity:0;
+transform:translateY(40px);
 }
 
-/* ===== CONTACT ===== */
+.testimonial.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* CONTACT */
 .contact{
 background:#020617;
 }
 
-.contact p{
-margin:8px 0;
-}
-
-/* ===== FLOAT BUTTONS ===== */
+/* FLOAT */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:#fff;
 padding:15px;
 border-radius:50%;
+color:#fff;
 text-decoration:none;
-font-size:18px;
 }
 
 .call{
@@ -177,18 +171,39 @@ position:fixed;
 bottom:80px;
 right:20px;
 background:var(--gold);
-color:#000;
 padding:15px;
 border-radius:50%;
+color:#000;
 text-decoration:none;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer{
 text-align:center;
 padding:20px;
-font-size:13px;
 opacity:0.6;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+@media(min-width:768px){
+.services{
+grid-template-columns:1fr 1fr;
+}
+.hero h1{
+font-size:50px;
+}
 }
 </style>
 </head>
@@ -208,51 +223,84 @@ opacity:0.6;
 
 <!-- HERO -->
 <section class="hero">
-<h1>DATOBAM</h1>
-<p>Private Investigators<br>
-Discretion is our Strength. Truth is our Mission.</p>
+<h1>DATOBAM PRIVATE INVESTIGATORS</h1>
+
+<p>
+At DATOBAM, we specialize in delivering confidential, accurate, and professional
+investigative services. Our mission is simple — uncover the truth while protecting
+your privacy at all costs.
+</p>
+
 <button class="btn" onclick="goContact()">Hire Investigator</button>
 </section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
-<h2>Our Services</h2>
+<h2>Our Professional Services</h2>
+
+<p style="max-width:600px;margin:auto;margin-bottom:30px;opacity:0.8;">
+We provide a wide range of intelligence and investigation services tailored
+for individuals, businesses, and organizations that require reliable and discreet solutions.
+</p>
 
 <div class="services">
-<div class="card">Surveillance</div>
-<div class="card">Background Investigation</div>
-<div class="card">Due Diligence</div>
-<div class="card">Insurance Investigation</div>
-<div class="card">Infidelity Check</div>
-<div class="card">Undercover Operations</div>
+
+<div class="card">Surveillance Operations — Real-time monitoring and evidence gathering.</div>
+
+<div class="card">Background Investigation — Deep checks on individuals and companies.</div>
+
+<div class="card">Due Diligence — Verify facts before business or personal decisions.</div>
+
+<div class="card">Insurance Investigation — Detect fraud and validate claims.</div>
+
+<div class="card">Infidelity Investigation — Discreet relationship verification.</div>
+
+<div class="card">Undercover Operations — Covert intelligence gathering and infiltration.</div>
+
 </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section about" id="about">
-<h2>About Us</h2>
-<p>
-DATOBAM Private Investigators deliver discreet, reliable,
-and professional investigation services across Nigeria and beyond.
-We prioritize confidentiality and accuracy in every case.
+<h2>About DATOBAM</h2>
+
+<p style="max-width:650px;margin:auto;opacity:0.9;">
+DATOBAM Private Investigators is a trusted intelligence service provider operating with the highest level of confidentiality and professionalism.
+We understand that every case is sensitive, which is why we approach each investigation with precision, discretion, and integrity.
+
+Our team is dedicated to delivering factual, evidence-based results that empower our clients to make informed decisions.
 </p>
+
 </section>
 
 <!-- WHY -->
 <section class="section why">
-<h2>Why Choose Us</h2>
-<div class="why-item">✔ 100% Confidential</div>
-<div class="why-item">✔ Accurate & Trusted</div>
-<div class="why-item">✔ Fast & Reliable</div>
-<div class="why-item">✔ Professional Team</div>
+<h2>Why Clients Trust Us</h2>
+
+<p style="max-width:600px;margin:auto;opacity:0.8;">
+We don’t just investigate — we protect your reputation, your privacy, and your peace of mind.
+</p>
+
+<br>
+
+<div>✔ 100% Confidential Handling of All Cases</div>
+<div>✔ Proven Accuracy & Reliable Intelligence</div>
+<div>✔ Fast Response & Case Execution</div>
+<div>✔ Professional & Experienced Investigators</div>
+
 </section>
 
 <!-- TESTIMONIAL -->
 <section class="section">
-<h2>Client Feedback</h2>
+<h2>Client Testimonials</h2>
 
-<div class="testimonial">"Professional and discreet service."</div>
-<div class="testimonial">"Highly reliable investigators."</div>
+<div class="testimonial">
+"DATOBAM handled my case with absolute confidentiality and delivered clear results. Highly recommended."
+</div>
+
+<div class="testimonial">
+"Their professionalism and speed impressed me. I got exactly the answers I needed."
+</div>
 
 </section>
 
@@ -260,11 +308,16 @@ We prioritize confidentiality and accuracy in every case.
 <section class="section contact" id="contact">
 <h2>Contact Us</h2>
 
-<p><strong>Investigator:</strong> Mustapha Saliu Ibrahim</p>
+<p><strong>Lead Investigator:</strong> Mustapha Saliu Ibrahim</p>
 <p><strong>Phone:</strong> +2347036883907</p>
 <p><strong>Email:</strong> datobamprivateinvestigators@gmail.com</p>
 
-<button class="btn" onclick="contactNow()">WhatsApp Now</button>
+<p style="margin-top:15px;opacity:0.8;">
+Reach out today for a confidential consultation. Your case will be handled with
+the highest level of professionalism and discretion.
+</p>
+
+<button class="btn" onclick="contactNow()">Chat on WhatsApp</button>
 </section>
 
 <!-- FLOAT BUTTONS -->
@@ -273,7 +326,7 @@ We prioritize confidentiality and accuracy in every case.
 
 <!-- FOOTER -->
 <div class="footer">
-© 2026 DATOBAM Private Investigators
+© 2026 DATOBAM Private Investigators — All Rights Reserved
 </div>
 
 <script>
@@ -284,6 +337,19 @@ document.getElementById("contact").scrollIntoView({behavior:"smooth"});
 function contactNow(){
 window.location.href="https://wa.me/2347036883907";
 }
+
+/* SCROLL ANIMATION */
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll('.card, .testimonial').forEach(el=>{
+observer.observe(el);
+});
 </script>
 
 </body>
