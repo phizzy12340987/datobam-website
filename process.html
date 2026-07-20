@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Investigation Process | DATOBAM Private Investigators</title>
+
+<!-- Font Awesome for sleek agency icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+  --gold: #facc15;
+  --gold-hover: #eab308;
+  --dark: #0b0f1a;
+  --card: #111827;
+  --card-hover: #1f2937;
+  --border: rgba(250, 204, 21, 0.15);
+  --text-muted: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark);
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-badge {
+  width: 40px;
+  height: 40px;
+  background: var(--gold);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+.logo-text {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: var(--gold);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* PAGE HEADER HERO */
+.page-header {
+  padding: 160px 20px 80px;
+  background: linear-gradient(180deg, rgba(11,15,26,0.85) 0%, rgba(11,15,26,0.98) 100%),
+              url('https://images.unsplash.com/photo-1520975922203-b0b2f5c9c3a1?q=80&w=1920') center/cover no-repeat;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.page-header h1 span {
+  color: var(--gold);
+}
+
+.page-header p {
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* SECTION COMMON */
+.section {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  color: var(--gold);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* DETAILED PROCESS TIMELINE */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+.timeline-step.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-badge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  background: var(--card);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  background: var(--card-hover);
+  border-color: var(--border);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-header h3 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.timeline-header h3 i {
+  color: var(--gold);
+  margin-right: 8px;
+}
+
+.step-phase {
+  background: rgba(250, 204, 21, 0.1);
+  color: var(--gold);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.step-details {
+  list-style: none;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 15px;
+}
+
+.step-details li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.step-details i {
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+/* PRINCIPLES BANNER */
+.principles-box {
+  background: #020617;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.principle-item i {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.principle-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.principle-item p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+/* CTA BOX */
+.cta-banner {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-top: 60px;
+}
+
+.cta-banner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.cta-banner p {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  padding: 14px 28px;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+}
+
+/* FLOATING BUTTONS */
+.float-btn {
+  position: fixed;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  z-index: 999;
+  transition: transform 0.3s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  bottom: 20px;
+  background: #25D366;
+}
+
+.call {
+  bottom: 80px;
+  background: var(--gold);
+  color: #000;
+}
+
+/* FOOTER */
+footer {
+  background: #020617;
+  padding: 40px 5% 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-disclaimer {
+  max-width: 600px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-step {
+    width: 50%;
+    padding-left: 0;
+    margin-bottom: 60px;
+  }
+
+  .timeline-step:nth-child(odd) {
+    left: 0;
+    padding-right: 40px;
+    text-align: right;
+  }
+
+  .timeline-step:nth-child(odd) .step-details li {
+    justify-content: flex-end;
+  }
+
+  .timeline-step:nth-child(even) {
+    left: 50%;
+    padding-left: 40px;
+  }
+
+  .timeline-step:nth-child(odd) .timeline-badge {
+    left: auto;
+    right: -21px;
+  }
+
+  .timeline-step:nth-child(even) .timeline-badge {
+    left: -21px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--card);
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="logo-container">
+    <div class="logo-badge">D</div>
+    <div class="logo-text">DATOBAM</div>
+  </a>
+
+  <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="process.html" class="active">Our Process</a>
+    <a href="index.html#location">Location</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <span class="section-tag">How We Work</span>
+  <h1>Our Investigation <span>Workflow</span></h1>
+  <p>A systematic, transparent, and strictly confidential 4-step approach engineered to gather rock-solid evidence safely and legally.</p>
+</header>
+
+<!-- PROCESS TIMELINE SECTION -->
+<section class="section">
+  
+  <div class="timeline">
+    
+    <!-- STEP 1 -->
+    <div class="timeline-step">
+      <div class="timeline-badge">01</div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3><i class="fas fa-user-shield"></i> Confidential Intake</h3>
+          <span class="step-phase">Phase 01</span>
+        </div>
+        <p>Every case starts with a secure and encrypted consultation to understand your requirements, establish scope, and verify legal standing without putting your privacy at risk.</p>
+        <ul class="step-details">
+          <li><i class="fas fa-check"></i> Non-Disclosure Agreement (NDA) coverage</li>
+          <li><i class="fas fa-check"></i> Anonymous/Pseudonym intake option</li>
+          <li><i class="fas fa-check"></i> Initial feasibility & legal review</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="timeline-step">
+      <div class="timeline-badge">02</div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3><i class="fas fa-chess-knight"></i> Strategy & Quote</h3>
+          <span class="step-phase">Phase 02</span>
+        </div>
+        <p>We build a customized operational blueprint suited to the specific parameters of your target. Transparent flat-fee proposals ensure zero unexpected charges.</p>
+        <ul class="step-details">
+          <li><i class="fas fa-check"></i> Actionable operational roadmap</li>
+          <li><i class="fas fa-check"></i> Resource & field agent allocation</li>
+          <li><i class="fas fa-check"></i> Clear, transparent pricing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="timeline-step">
+      <div class="timeline-badge">03</div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3><i class="fas fa-search-location"></i> Field Operations</h3>
+          <span class="step-phase">Phase 03</span>
+        </div>
+        <p>Our experienced field operatives deploy discreetly using high-tech equipment to observe, document, and extract critical intelligence without alerting targets.</p>
+        <ul class="step-details">
+          <li><i class="fas fa-check"></i> Covert surveillance & tracking</li>
+          <li><i class="fas fa-check"></i> Background sweeps & asset verification</li>
+          <li><i class="fas fa-check"></i> Real-time secure client progress updates</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="timeline-step">
+      <div class="timeline-badge">04</div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3><i class="fas fa-file-contract"></i> Evidence & Reporting</h3>
+          <span class="step-phase">Phase 04</span>
+        </div>
+        <p>All gathered intelligence is organized into a detailed, court-admissible report complete with timestamps, photos, videos, and professional analysis.</p>
+        <ul class="step-details">
+          <li><i class="fas fa-check"></i> Comprehensive digital dossier</li>
+          <li><i class="fas fa-check"></i> High-definition media proof</li>
+          <li><i class="fas fa-check"></i> Secure, encrypted file transfer</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- OPERATIONAL GUARANTEES -->
+  <div class="principles-box">
+    <span class="section-tag">Standards of Practice</span>
+    <h2 style="font-size: 2rem; margin-top: 5px;">Our Standard Commitments</h2>
+    
+    <div class="principles-grid">
+      <div class="principle-item">
+        <i class="fas fa-lock"></i>
+        <h4>100% Confidentiality</h4>
+        <p>Your identity and case details remain sealed under strict non-disclosure safeguards.</p>
+      </div>
+
+      <div class="principle-item">
+        <i class="fas fa-balance-scale"></i>
+        <h4>Admissible Intelligence</h4>
+        <p>We operate strictly within ethical and legal boundaries so findings stand up in court.</p>
+      </div>
+
+      <div class="principle-item">
+        <i class="fas fa-stopwatch"></i>
+        <h4>Rapid Deployment</h4>
+        <p>Field operatives can be deployed on short notice for time-sensitive emergency cases.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALL TO ACTION BANNER -->
+  <div class="cta-banner">
+    <h2>Ready to Begin Your Investigation?</h2>
+    <p>Get in touch with Lead Investigator Mustapha Saliu Ibrahim today for a confidential, no-obligation case evaluation.</p>
+    <a href="contact.html" class="btn"><i class="fas fa-user-secret"></i> Start Confidential Intake</a>
+  </div>
+
+</section>
+
+<!-- FLOATING FAST-CONTACT BUTTONS -->
+<a href="tel:+2347036883907" class="float-btn call" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/2347036883907" class="float-btn whatsapp" target="_blank" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="logo-container">
+      <div class="logo-badge">D</div>
+      <div class="logo-text">DATOBAM PRIVATE INVESTIGATORS</div>
+    </div>
+    
+    <p class="footer-disclaimer">
+      Disclaimer: DATOBAM Private Investigators operates in full compliance with localized regulations. All intelligence gathering operations prioritize legal admissibility and strict client confidentiality.
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 DATOBAM Private Investigators. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+// Toggle Mobile Navigation
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+}
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+  threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.timeline-step').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
