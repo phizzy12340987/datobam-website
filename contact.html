@@ -1,553 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | DATOBAM Private Investigators</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact DATOBAM Private Investigators - Secure, confidential inquiries for surveillance, background checks, and intelligence gathering in Nigeria.">
+  <title>Contact Us | DATOBAM Private Investigators</title>
 
-<!-- Font Awesome for agency icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome for agency icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-:root {
-  --gold: #facc15;
-  --gold-hover: #eab308;
-  --dark: #0b0f1a;
-  --card: #111827;
-  --card-hover: #1f2937;
-  --border: rgba(250, 204, 21, 0.15);
-  --text-muted: #9ca3af;
-}
+  <style>
+    :root {
+      --gold: #facc15;
+      --gold-hover: #eab308;
+      --dark: #0b0f1a;
+      --card: #111827;
+      --card-hover: #1f2937;
+      --border: rgba(250, 204, 21, 0.15);
+      --text-muted: #9ca3af;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  scroll-behavior: smooth;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+    }
 
-body {
-  background: var(--dark);
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+    body {
+      background: var(--dark);
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-/* NAVIGATION */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 5%;
-  background: rgba(11, 15, 26, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  z-index: 1000;
-}
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 5%;
+      background: rgba(11, 15, 26, 0.90);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      z-index: 1000;
+    }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: #fff;
-}
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
 
-.logo-badge {
-  width: 40px;
-  height: 40px;
-  background: var(--gold);
-  color: var(--dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.2rem;
-  border-radius: 8px;
-}
+    .logo-badge {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
 
-.logo-text {
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 1.1rem;
-}
+    .logo-text {
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
 
-nav a {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: 0.3s;
-}
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-nav a:hover, nav a.active {
-  color: var(--gold);
-}
+    nav a:hover, 
+    nav a.active {
+      color: var(--gold);
+    }
 
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-}
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 5px;
+    }
 
-/* PAGE HEADER HERO */
-.page-header {
-  padding: 160px 20px 80px;
-  background: linear-gradient(180deg, rgba(11,15,26,0.85) 0%, rgba(11,15,26,0.98) 100%),
-              url('https://images.unsplash.com/photo-1520975922203-b0b2f5c9c3a1?q=80&w=1920') center/cover no-repeat;
-  text-align: center;
-}
+    /* PAGE HEADER HERO */
+    .page-header {
+      padding: 160px 20px 80px;
+      background: linear-gradient(180deg, rgba(11,15,26,0.85) 0%, rgba(11,15,26,0.98) 100%),
+                  url('https://images.unsplash.com/photo-1520975922203-b0b2f5c9c3a1?q=80&w=1920') center/cover no-repeat;
+      text-align: center;
+    }
 
-.page-header h1 {
-  font-size: 2.8rem;
-  color: #fff;
-  margin-bottom: 15px;
-}
+    .page-header h1 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 15px;
+    }
 
-.page-header h1 span {
-  color: var(--gold);
-}
+    .page-header h1 span {
+      color: var(--gold);
+    }
 
-.page-header p {
-  color: var(--text-muted);
-  max-width: 650px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-}
+    .page-header p {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
 
-/* SECTION COMMON */
-.section {
-  padding: 80px 5%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    /* SECTION COMMON */
+    .section {
+      padding: 80px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.section-tag {
-  color: var(--gold);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 8px;
-}
+    .section-tag {
+      color: var(--gold);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
 
-/* CONTACT SECTION GRID */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
+    /* NOTICE BOX */
+    .notice-box {
+      background: rgba(250, 204, 21, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+    .notice-box i {
+      color: var(--gold);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
 
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  background: var(--card);
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.03);
-  transition: border-color 0.3s;
-}
+    .notice-box p {
+      color: #e5e7eb;
+      font-size: 0.9rem;
+    }
 
-.info-item:hover {
-  border-color: var(--border);
-}
+    /* CONTACT SECTION GRID */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
 
-.info-item i {
-  color: var(--gold);
-  font-size: 1.2rem;
-  margin-top: 3px;
-}
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-.info-item h4 {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 2px;
-}
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.03);
+      transition: border-color 0.3s ease;
+    }
 
-.info-item p {
-  font-size: 1.05rem;
-  font-weight: 600;
-}
+    .info-item:hover {
+      border-color: var(--border);
+    }
 
-.contact-form {
-  background: var(--card);
-  padding: 35px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.05);
-}
+    .info-item i {
+      color: var(--gold);
+      font-size: 1.2rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
 
-.form-group {
-  margin-bottom: 20px;
-}
+    .info-item h4 {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
 
-.form-group label {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 8px;
-}
+    .info-item p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      word-break: break-word;
+    }
 
-.form-control {
-  width: 100%;
-  padding: 12px 15px;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 6px;
-  color: #fff;
-  outline: none;
-  transition: 0.3s;
-}
+    .contact-form {
+      background: var(--card);
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
 
-.form-control:focus {
-  border-color: var(--gold);
-}
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-textarea.form-control {
-  resize: vertical;
-  min-height: 120px;
-}
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
 
-.btn {
-  padding: 14px 28px;
-  background: var(--gold);
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-  width: 100%;
-}
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
 
-.btn:hover {
-  background: var(--gold-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
-}
+    .form-control option {
+      background: var(--card);
+      color: #fff;
+    }
 
-.map {
-  width: 100%;
-  height: 250px;
-  border: 0;
-  border-radius: 10px;
-  margin-top: 10px;
-}
+    .form-control:focus {
+      border-color: var(--gold);
+    }
 
-/* NOTICE BOX */
-.notice-box {
-  background: rgba(250, 204, 21, 0.05);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
 
-.notice-box i {
-  color: var(--gold);
-  font-size: 1.5rem;
-}
+    .btn {
+      padding: 14px 28px;
+      background: var(--gold);
+      color: #000000;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      width: 100%;
+    }
 
-.notice-box p {
-  color: #e5e7eb;
-  font-size: 0.9rem;
-}
+    .btn:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    }
 
-/* FLOATING BUTTONS */
-.float-btn {
-  position: fixed;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-  z-index: 999;
-  transition: transform 0.3s;
-}
+    .map {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
 
-.float-btn:hover {
-  transform: scale(1.1);
-}
+    /* FLOATING BUTTONS */
+    .float-btn {
+      position: fixed;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+      z-index: 999;
+      transition: transform 0.3s ease;
+    }
 
-.whatsapp {
-  bottom: 20px;
-  background: #25D366;
-}
+    .float-btn:hover {
+      transform: scale(1.1);
+    }
 
-.call {
-  bottom: 80px;
-  background: var(--gold);
-  color: #000;
-}
+    .whatsapp {
+      bottom: 20px;
+      background: #25D366;
+    }
 
-/* FOOTER */
-footer {
-  background: #020617;
-  padding: 40px 5% 20px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  text-align: center;
-}
+    .call {
+      bottom: 80px;
+      background: var(--gold);
+      color: #000;
+    }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
+    /* FOOTER */
+    footer {
+      background: #020617;
+      padding: 40px 5% 20px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+    }
 
-.footer-disclaimer {
-  max-width: 600px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 
-.footer-bottom {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  width: 100%;
-}
+    .footer-disclaimer {
+      max-width: 600px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
 
-/* MEDIA QUERIES */
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
+    .footer-bottom {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      width: 100%;
+    }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--card);
-    flex-direction: column;
-    padding: 20px;
-    border-bottom: 1px solid var(--border);
-  }
-  
-  .nav-links.active {
-    display: flex;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
+    /* MEDIA QUERIES */
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-  .page-header h1 {
-    font-size: 2.2rem;
-  }
-}
-</style>
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--card);
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-  <a href="index.html" class="logo-container">
-    <div class="logo-badge">D</div>
-    <div class="logo-text">DATOBAM</div>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="logo-container" aria-label="DATOBAM Homepage">
+      <div class="logo-badge">D</div>
+      <div class="logo-text">DATOBAM</div>
+    </a>
+
+    <button class="mobile-menu-btn" id="menuToggleBtn" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="index.html#process">Our Process</a>
+      <a href="index.html#location">Location</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <span class="section-tag">Direct Confidential Access</span>
+      <h1>Initiate A <span>Consultation</span></h1>
+      <p>All inquiries are handled under strict non-disclosure practices. Reach out directly to discuss your case safely.</p>
+    </header>
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="section">
+      
+      <div class="notice-box">
+        <i class="fas fa-user-shield" aria-hidden="true"></i>
+        <p><strong>Strict Privacy Guaranteed:</strong> You are not required to reveal sensitive identifiers during initial intake. We encourage using secure messaging channels for confidential details.</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-user-shield" aria-hidden="true"></i>
+            <div>
+              <h4>Lead Investigator</h4>
+              <p>Mustapha Saliu Ibrahim</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Direct Phone / WhatsApp</h4>
+              <p><a href="tel:+2347036883907" style="color:#fff; text-decoration:none;">+234 703 688 3907</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <div>
+              <h4>Encrypted Email Inquiry</h4>
+              <p style="font-size: 0.95rem;">
+                <a href="mailto:datobamprivateinvestigators@gmail.com" style="color:#fff; text-decoration:none;">datobamprivateinvestigators@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Primary Operations Center</h4>
+              <p>Lagos State, Nigeria</p>
+            </div>
+          </div>
+
+          <!-- MAP -->
+          <iframe class="map"
+            src="https://maps.google.com/maps?q=Lagos%20Nigeria&t=&z=12&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            title="DATOBAM Location Map">
+          </iframe>
+        </div>
+
+        <!-- INQUIRY FORM -->
+        <div class="contact-form">
+          <h3 style="margin-bottom: 20px;">Send a Confidential Message</h3>
+          <form id="contactPageForm" onsubmit="handleFormSubmit(event)">
+            
+            <div class="form-group">
+              <label for="clientName">Your Name / Alias</label>
+              <input type="text" class="form-control" placeholder="Optional for anonymity" id="clientName">
+            </div>
+
+            <div class="form-group">
+              <label for="clientContact">Preferred Contact (Phone / WhatsApp / Email) *</label>
+              <input type="text" class="form-control" placeholder="Where should we respond?" required id="clientContact">
+            </div>
+
+            <div class="form-group">
+              <label for="serviceType">Service Required</label>
+              <select class="form-control" id="serviceType">
+                <option value="Surveillance Operations">Surveillance Operations</option>
+                <option value="Background Investigation">Background Investigation</option>
+                <option value="Corporate Due Diligence">Corporate Due Diligence</option>
+                <option value="Infidelity Verification">Infidelity Verification</option>
+                <option value="Undercover Operations">Undercover Operations</option>
+                <option value="Insurance Fraud Detection">Insurance Fraud Detection</option>
+                <option value="Other / Custom Investigation">Other / Custom Investigation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="caseDetails">Brief Case Summary *</label>
+              <textarea class="form-control" placeholder="Provide basic details safely..." required id="caseDetails"></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+              <i class="fas fa-lock" aria-hidden="true"></i> Submit Case Privately
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FLOATING FAST-CONTACT BUTTONS -->
+  <a href="tel:+2347036883907" class="float-btn call" aria-label="Call Us Directly">
+    <i class="fas fa-phone" aria-hidden="true"></i>
+  </a>
+  <a href="https://wa.me/2347036883907" class="float-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
-  <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">
-    <i class="fas fa-bars"></i>
-  </button>
-
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="index.html#process">Our Process</a>
-    <a href="index.html#location">Location</a>
-    <a href="contact.html" class="active">Contact</a>
-  </div>
-</nav>
-
-<!-- PAGE HEADER -->
-<header class="page-header">
-  <span class="section-tag">Direct Confidential Access</span>
-  <h1>Initiate A <span>Consultation</span></h1>
-  <p>All inquiries are handled under strict non-disclosure practices. Reach out directly to discuss your case safely.</p>
-</header>
-
-<!-- MAIN CONTACT SECTION -->
-<section class="section">
-  
-  <div class="notice-box">
-    <i class="fas fa-user-shield"></i>
-    <p><strong>Strict Privacy Guaranteed:</strong> You are not required to reveal sensitive identifiers during initial intake. We encourage using secure messaging channels for confidential details.</p>
-  </div>
-
-  <div class="contact-grid">
-    
-    <!-- CONTACT INFORMATION -->
-    <div class="contact-info">
-      <div class="info-item">
-        <i class="fas fa-user-shield"></i>
-        <div>
-          <h4>Lead Investigator</h4>
-          <p>Mustapha Saliu Ibrahim</p>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo-container">
+        <div class="logo-badge">D</div>
+        <div class="logo-text">DATOBAM PRIVATE INVESTIGATORS</div>
       </div>
-
-      <div class="info-item">
-        <i class="fas fa-phone-alt"></i>
-        <div>
-          <h4>Direct Phone / WhatsApp</h4>
-          <p><a href="tel:+2347036883907" style="color:#fff; text-decoration:none;">+234 703 688 3907</a></p>
-        </div>
-      </div>
-
-      <div class="info-item">
-        <i class="fas fa-envelope"></i>
-        <div>
-          <h4>Encrypted Email Inquiry</h4>
-          <p style="font-size: 0.95rem;">datobamprivateinvestigators@gmail.com</p>
-        </div>
-      </div>
-
-      <div class="info-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <div>
-          <h4>Primary Operations Center</h4>
-          <p>Lagos State, Nigeria</p>
-        </div>
-      </div>
-
-      <!-- MAP -->
-      <iframe class="map"
-        src="https://maps.google.com/maps?q=Lagos%20Nigeria&t=&z=12&ie=UTF8&iwloc=&output=embed"
-        loading="lazy"
-        title="DATOBAM Location Map">
-      </iframe>
+      
+      <p class="footer-disclaimer">
+        Disclaimer: DATOBAM Private Investigators operates in full compliance with localized regulations. All intelligence gathering operations prioritize legal admissibility and strict client confidentiality.
+      </p>
     </div>
 
-    <!-- INQUIRY FORM -->
-    <div class="contact-form">
-      <h3 style="margin-bottom: 20px;">Send a Confidential Message</h3>
-      <form id="contactPageForm" onsubmit="handleFormSubmit(event)">
-        
-        <div class="form-group">
-          <label>Your Name / Alias</label>
-          <input type="text" class="form-control" placeholder="Optional for anonymity" id="clientName">
-        </div>
-
-        <div class="form-group">
-          <label>Preferred Contact (Phone / WhatsApp / Email)</label>
-          <input type="text" class="form-control" placeholder="Where should we respond?" required id="clientContact">
-        </div>
-
-        <div class="form-group">
-          <label>Service Required</label>
-          <select class="form-control" id="serviceType">
-            <option>Surveillance Operations</option>
-            <option>Background Investigation</option>
-            <option>Corporate Due Diligence</option>
-            <option>Infidelity Verification</option>
-            <option>Undercover Operations</option>
-            <option>Insurance Fraud Detection</option>
-            <option>Other / Custom Investigation</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Brief Case Summary</label>
-          <textarea class="form-control" placeholder="Provide basic details safely..." required id="caseDetails"></textarea>
-        </div>
-
-        <button type="submit" class="btn">
-          <i class="fas fa-lock"></i> Submit Case Privately
-        </button>
-      </form>
+    <div class="footer-bottom">
+      &copy; 2026 DATOBAM Private Investigators. All Rights Reserved.
     </div>
+  </footer>
 
-  </div>
-</section>
+  <script>
+    // Toggle Mobile Navigation Menu
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
 
-<!-- FLOATING FAST-CONTACT BUTTONS -->
-<a href="tel:+2347036883907" class="float-btn call" aria-label="Call Us"><i class="fas fa-phone"></i></a>
-<a href="https://wa.me/2347036883907" class="float-btn whatsapp" target="_blank" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+    // Close menu when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+      const navLinks = document.getElementById('navLinks');
+      const menuBtn = document.getElementById('menuToggleBtn');
+      if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-content">
-    <div class="logo-container">
-      <div class="logo-badge">D</div>
-      <div class="logo-text">DATOBAM PRIVATE INVESTIGATORS</div>
-    </div>
-    
-    <p class="footer-disclaimer">
-      Disclaimer: DATOBAM Private Investigators operates in full compliance with localized regulations. All intelligence gathering operations prioritize legal admissibility and strict client confidentiality.
-    </p>
-  </div>
+    // Handle Form Submission redirecting to WhatsApp safely
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('clientName').value.trim() || "Client (Anonymous)";
+      const contact = document.getElementById('clientContact').value.trim();
+      const service = document.getElementById('serviceType').value;
+      const details = document.getElementById('caseDetails').value.trim();
 
-  <div class="footer-bottom">
-    © 2026 DATOBAM Private Investigators. All Rights Reserved.
-  </div>
-</footer>
-
-<script>
-// Toggle Mobile Navigation
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('active');
-}
-
-// Handle Form Submission redirecting to WhatsApp
-function handleFormSubmit(e) {
-  e.preventDefault();
-  
-  const name = document.getElementById('clientName').value || "Client";
-  const contact = document.getElementById('clientContact').value;
-  const service = document.getElementById('serviceType').value;
-  const details = document.getElementById('caseDetails').value;
-
-  const text = `*New Contact Inquiry*%0A%0A*Name/Alias:* ${encodeURIComponent(name)}%0A*Contact:* ${encodeURIComponent(contact)}%0A*Service:* ${encodeURIComponent(service)}%0A*Summary:* ${encodeURIComponent(details)}`;
-  
-  window.open(`https://wa.me/2347036883907?text=${text}`, '_blank');
-}
-</script>
+      const messageText = `*New Contact Inquiry*\n\n` +
+                          `*Name/Alias:* ${name}\n` +
+                          `*Contact:* ${contact}\n` +
+                          `*Service Required:* ${service}\n` +
+                          `*Summary:* ${details}`;
+      
+      const encodedText = encodeURIComponent(messageText);
+      window.open(`https://wa.me/2347036883907?text=${encodedText}`, '_blank', 'noopener,noreferrer');
+    }
+  </script>
 
 </body>
 </html>
