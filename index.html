@@ -1,132 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DATOBAM Private Investigators Nigeria. Discreet Surveillance, Background Checks, Due Diligence, Infidelity, Insurance Fraud. Contact Mustapha Saliu Ibrahim">
-  <title>DATOBAM Private Investigators | Truth. Discreetly Delivered.</title>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
-    body{background:#0a0a0a;color:#fff;line-height:1.6;}
-    .container{max-width:1100px;margin:auto;padding:0 20px;}
-    
-    /* HEADER */
-    header{background:#000;border-bottom:3px solid #D4AF37;padding:20px 0;position:sticky;top:0;z-index:999;}
-    header h1{color:#D4AF37;font-size:24px;}
-    header h1 span{color:#fff;font-size:14px;display:block;}
-    nav{margin-top:10px;}
-    nav a{color:#fff;margin-right:20px;text-decoration:none;font-weight:600;}
-    nav a:hover{color:#D4AF37;}
-    
-    /* HERO */
-    .hero{background:linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85));padding:100px 20px;text-align:center;border-bottom:2px solid #D4AF37;}
-    .hero h2{font-size:42px;color:#D4AF37;margin-bottom:10px;}
-    .hero h2 span{color:#fff;}
-    .hero p{font-size:18px;margin-bottom:20px;}
-    .trust{margin:20px 0;}
-    .trust span{display:inline-block;margin:5px 10px;color:#D4AF37;font-weight:600;}
-    .btn{background:#D4AF37;color:#000;padding:16px 40px;border-radius:5px;text-decoration:none;font-weight:bold;font-size:16px;display:inline-block;margin-top:15px;}
-    .btn:hover{background:#e6c200;}
-    
-    /* SERVICES */
-    .section{padding:60px 20px;}
-    .section h3{text-align:center;font-size:32px;color:#D4AF37;margin-bottom:40px;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-    .card{background:#1a1a1a;padding:25px;border-left:4px solid #D4AF37;border-radius:5px;transition:0.3s;}
-    .card:hover{background:#222;transform:translateY(-5px);}
-    .card h4{color:#D4AF37;margin-bottom:10px;font-size:20px;}
-    
-    /* ABOUT */
-    .about{background:#111;}
-    .about p{max-width:800px;margin:auto;text-align:center;font-size:16px;}
-    
-    /* CONTACT */
-    .contact{text-align:center;}
-    .contact-info{font-size:18px;margin:20px 0;}
-    .contact-info a{color:#D4AF37;text-decoration:none;}
-    .social a{color:#D4AF37;margin:0 10px;text-decoration:none;font-weight:600;}
-    
-    /* FOOTER */
-    footer{background:#000;border-top:3px solid #D4AF37;padding:30px 20px;text-align:center;}
-    footer .legal{color:#aaa;font-size:12px;margin-top:10px;}
-    
-    /* MOBILE */
-    @media(max-width:768px){
-      .hero h2{font-size:28px;}
-      nav a{display:block;margin:10px 0;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATOBAM Private Investigators</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial;}
+body{background:#0a0a0a;color:#fff;line-height:1.6;scroll-behavior:smooth;}
+
+.container{max-width:1100px;margin:auto;padding:0 20px;}
+
+/* HEADER */
+header{
+background:#000;
+border-bottom:3px solid #D4AF37;
+padding:15px 0;
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+}
+header h1{color:#D4AF37;font-size:22px;}
+header span{font-size:12px;color:#fff;}
+nav a{
+color:#fff;
+margin-right:15px;
+text-decoration:none;
+font-weight:600;
+}
+nav a:hover{color:#D4AF37;}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+.hero::after{
+content:'';
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.85);
+}
+.hero-content{position:relative;z-index:2;}
+.hero h2{font-size:42px;color:#D4AF37;}
+.hero h2 span{color:#fff;}
+.hero p{margin:15px 0;font-size:18px;}
+
+.btn{
+background:#D4AF37;
+color:#000;
+padding:14px 35px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-top:10px;
+}
+.btn:hover{background:#e6c200;}
+
+/* SECTION */
+.section{padding:100px 20px;}
+.section h3{text-align:center;color:#D4AF37;margin-bottom:40px;font-size:30px;}
+
+/* SERVICES */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+.card{
+background:#1a1a1a;
+border-radius:6px;
+overflow:hidden;
+transition:0.3s;
+}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+.card-content{padding:20px;}
+.card h4{color:#D4AF37;margin-bottom:10px;}
+.card:hover{transform:translateY(-5px);}
+
+/* ABOUT */
+.about{
+background:url('https://images.unsplash.com/photo-1556157382-97eda2f9e2bf') center/cover no-repeat;
+position:relative;
+}
+.about::after{
+content:'';
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.85);
+}
+.about .container{position:relative;z-index:2;text-align:center;}
+.about p{max-width:700px;margin:auto;}
+
+/* CONTACT */
+.contact{text-align:center;}
+.contact a{color:#D4AF37;text-decoration:none;}
+
+/* FOOTER */
+footer{
+background:#000;
+border-top:3px solid #D4AF37;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h2{font-size:28px;}
+nav a{display:block;margin:10px 0;}
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1>DATOBAM <span>PRIVATE INVESTIGATORS</span></h1>
-      <nav>
-        <a href="home.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero" id="home">
-    <div class="container">
-      <h2>Truth. <span>Discreetly Delivered.</span></h2>
-      <p>Professional Private Detective: <b>Mustapha Saliu Ibrahim</b></p>
-      <div class="trust">
-        <span>✓ Discreet & Confidential</span>
-        <span>✓ Accurate & Reliable</span>
-        <span>✓ Professional & Trustworthy</span>
-      </div>
-      <a href="https://wa.me/2347036683907" class="btn" target="_blank">Book Confidential Consultation on WhatsApp</a>
-    </div>
-  </section>
+<header>
+<div class="container">
+<h1>DATOBAM <span>PRIVATE INVESTIGATORS</span></h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
 
-  <section class="section" id="services">
-    <div class="container">
-      <h3>Our Core Services</h3>
-      <div class="grid">
-        <div class="card"><h4>1. Surveillance</h4><p>24/7 discreet monitoring for personal and corporate cases. Photo and video evidence provided.</p></div>
-        <div class="card"><h4>2. Background Investigation</h4><p>Verify employees, partners, tenants, and nannies before you commit.</p></div>
-        <div class="card"><h4>3. Due Diligence</h4><p>Investigate before business deals, mergers, investments, and partnerships.</p></div>
-        <div class="card"><h4>4. Insurance Investigation</h4><p>Fraud detection, claims verification, and surveillance for insurance companies.</p></div>
-        <div class="card"><h4>5. Infidelity Check</h4><p>100% confidential relationship investigations with proof.</p></div>
-        <div class="card"><h4>6. Undercover Operations</h4><p>Covert operations for corporate fraud, theft, and personal matters.</p></div>
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h2>Truth. <span>Discreetly Delivered.</span></h2>
+<p>Professional Private Detective: <b>Mustapha Saliu Ibrahim</b></p>
 
-  <section class="section about" id="about">
-    <div class="container">
-      <h3>About DATOBAM</h3>
-      <p><b>Discretion is our Strength. Truth is our Mission.</b><br><br>
-      DATOBAM Private Investigators is led by <b>Mustapha Saliu Ibrahim</b>, a licensed and professional Private Detective. 
-      We provide accurate, reliable, and 100% confidential investigation services across Nigeria. 
-      Your case is handled with the highest level of professionalism and secrecy.</p>
-    </div>
-  </section>
+<p>✓ Discreet | ✓ Reliable | ✓ 100% Confidential</p>
 
-  <section class="section contact" id="contact">
-    <div class="container">
-      <h3>Contact Us</h3>
-      <div class="contact-info">
-        <p><b>Phone / WhatsApp:</b> <a href="https://wa.me/2347036683907">+234 703 668 3907</a></p>
-        <p><b>Email:</b> <a href="mailto:datobamprivateinvestigators@gmail.com">datobamprivateinvestigators@gmail.com</a></p>
-      </div>
-      <div class="social">
-        <p><b>Follow Us:</b></p>
-        <a href="#">Facebook</a> | <a href="#">TikTok</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
-      </div>
-      <a href="https://wa.me/2347036683907" class="btn" target="_blank">Chat With Us Now</a>
-    </div>
-  </section>
+<a href="https://wa.me/2347036683907" class="btn">Start Confidential Chat</a>
+</div>
+</section>
 
-  <footer>
-    <div class="container">
-      <p>DATOBAM PRIVATE INVESTIGATORS</p>
-      <p class="legal">© 2026 DATOBAM. All investigations are conducted legally and ethically within Nigerian law.</p>
-    </div>
-  </footer>
+<!-- SERVICES -->
+<section class="section" id="services">
+<div class="container">
+<h3>Our Services</h3>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<div class="card-content">
+<h4>Surveillance</h4>
+<p>Professional monitoring with photo & video evidence.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85">
+<div class="card-content">
+<h4>Background Checks</h4>
+<p>Verify individuals before trust or hiring decisions.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
+<div class="card-content">
+<h4>Infidelity Investigation</h4>
+<p>Confidential relationship investigation with proof.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+<div class="card-content">
+<h4>Corporate Fraud</h4>
+<p>Detect internal theft and business fraud operations.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+<div class="container">
+<h3>About DATOBAM</h3>
+
+<p>
+DATOBAM Private Investigators is a trusted Nigerian investigative firm led by <b>Mustapha Saliu Ibrahim</b>.  
+We specialize in discreet, accurate, and professional investigations.  
+Every case is handled with complete confidentiality and legal compliance.
+</p>
+
+<br>
+<a href="https://wa.me/2347036683907" class="btn">Request Investigation</a>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+<div class="container">
+
+<h3>Contact Us</h3>
+
+<p><b>Phone / WhatsApp:</b><br>
+<a href="https://wa.me/2347036683907">+234 703 668 3907</a></p>
+
+<br>
+
+<p><b>Email:</b><br>
+<a href="mailto:datobamprivateinvestigators@gmail.com">
+datobamprivateinvestigators@gmail.com
+</a></p>
+
+<br>
+
+<a href="https://wa.me/2347036683907" class="btn">Chat Now</a>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 DATOBAM PRIVATE INVESTIGATORS</p>
+<p>All investigations conducted legally within Nigerian law.</p>
+</footer>
+
 </body>
 </html>
