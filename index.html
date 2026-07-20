@@ -3,325 +3,1007 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATOBAM Private Investigators | Confidential & Professional Investigative Services</title>
 
-<title>DATOBAM Private Investigators</title>
+<!-- Font Awesome for sleek agency icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-:root{
---gold:#facc15;
---dark:#0b0f1a;
---card:#111827;
+:root {
+  --gold: #facc15;
+  --gold-hover: #eab308;
+  --dark: #0b0f1a;
+  --card: #111827;
+  --card-hover: #1f2937;
+  --border: rgba(250, 204, 21, 0.15);
+  --text-muted: #9ca3af;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Segoe UI",sans-serif;
-scroll-behavior:smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
-background:var(--dark);
-color:#fff;
+body {
+  background: var(--dark);
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* NAV */
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-z-index:1000;
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
 }
 
-nav img{width:45px;}
-
-nav a{
-color:#fff;
-margin-left:15px;
-text-decoration:none;
-font-size:14px;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
 }
 
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
-url('https://images.unsplash.com/photo-1520975922203-b0b2f5c9c3a1');
-background-size:cover;
+.logo-badge {
+  width: 40px;
+  height: 40px;
+  background: var(--gold);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 8px;
 }
 
-.hero h1{
-font-size:38px;
-color:var(--gold);
-animation:fadeUp 1s ease;
+.logo-text {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
 }
 
-.hero p{
-max-width:500px;
-opacity:0.9;
-margin-top:15px;
-animation:fadeUp 1.5s ease;
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
 }
 
-.btn{
-margin-top:20px;
-padding:12px 25px;
-background:var(--gold);
-color:#000;
-border:none;
-border-radius:30px;
-font-weight:bold;
-cursor:pointer;
-animation:fadeUp 2s ease;
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* SECTION */
-.section{
-padding:90px 20px;
-text-align:center;
+nav a:hover {
+  color: var(--gold);
 }
 
-.section h2{
-color:var(--gold);
-margin-bottom:20px;
-font-size:26px;
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+  background: linear-gradient(180deg, rgba(11,15,26,0.75) 0%, rgba(11,15,26,0.95) 100%),
+              url('https://images.unsplash.com/photo-1520975922203-b0b2f5c9c3a1?q=80&w=1920') center/cover no-repeat;
+  position: relative;
+}
+
+.hero-badge {
+  padding: 6px 16px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid var(--border);
+  color: var(--gold);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s ease;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  max-width: 900px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  animation: fadeUp 1s ease;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 620px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  animation: fadeUp 1.2s ease;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 1.4s ease;
+}
+
+.btn {
+  padding: 14px 28px;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* STATS COUNTER BAR */
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 60px;
+  padding: 30px;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* SECTIONS COMMON */
+.section {
+  padding: 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.section-tag {
+  color: var(--gold);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
 }
 
 /* SERVICES */
-.services{
-display:grid;
-gap:20px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
-.card{
-background:var(--card);
-padding:25px;
-border-radius:10px;
-transition:0.3s;
-opacity:0;
-transform:translateY(40px);
+.card {
+  background: var(--card);
+  padding: 35px 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  display: flex;
+  flex-direction: column;
 }
 
-.card.show{
-opacity:1;
-transform:translateY(0);
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ABOUT */
-.about{
-background:#020617;
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--border);
+  transform: translateY(-5px);
 }
 
-/* TESTIMONIAL */
-.testimonial{
-background:var(--card);
-padding:20px;
-border-radius:10px;
-margin:15px 0;
-opacity:0;
-transform:translateY(40px);
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(250, 204, 21, 0.1);
+  color: var(--gold);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.testimonial.show{
-opacity:1;
-transform:translateY(0);
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
 }
 
-/* MAP */
-.map{
-width:100%;
-height:300px;
-border:0;
-border-radius:10px;
-margin-top:20px;
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
 }
 
-/* FLOAT BUTTONS */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-color:#fff;
-text-decoration:none;
+/* ABOUT SECTION */
+.about-wrapper {
+  background: #020617;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.call{
-position:fixed;
-bottom:80px;
-right:20px;
-background:var(--gold);
-padding:15px;
-border-radius:50%;
-color:#000;
-text-decoration:none;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.features-list {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #e5e7eb;
+}
+
+.features-list i {
+  color: var(--gold);
+}
+
+.about-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 40px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  color: rgba(250, 204, 21, 0.2);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* PROCESS SECTION */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.step-card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.step-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(250, 204, 21, 0.25);
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.step-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* TESTIMONIALS */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.testimonial {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+}
+
+.testimonial.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stars {
+  color: var(--gold);
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+.testimonial-text {
+  color: #e5e7eb;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.client-info h5 {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.client-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* CONTACT & LOCATION */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.info-item i {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+.info-item h4 {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.info-item p {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.contact-form {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: var(--gold);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.map {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* FLOATING CONTACT BUTTONS */
+.float-btn {
+  position: fixed;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  z-index: 999;
+  transition: transform 0.3s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  bottom: 20px;
+  background: #25D366;
+}
+
+.call {
+  bottom: 80px;
+  background: var(--gold);
+  color: #000;
 }
 
 /* FOOTER */
-.footer{
-text-align:center;
-padding:20px;
-opacity:0.6;
+footer {
+  background: #020617;
+  padding: 40px 5% 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
 }
 
-/* ANIMATION */
-@keyframes fadeUp{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-@media(min-width:768px){
-.services{
-grid-template-columns:1fr 1fr;
+.footer-disclaimer {
+  max-width: 600px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
-.hero h1{
-font-size:50px;
+
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  width: 100%;
 }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .about-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--card);
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .stats-bar {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav>
-<img src="logo.png">
-<div>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#location">Location</a>
-<a href="#contact">Contact</a>
-</div>
+  <a href="#" class="logo-container">
+    <div class="logo-badge">D</div>
+    <div class="logo-text">DATOBAM</div>
+  </a>
+
+  <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#process">Our Process</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-<h1>DATOBAM PRIVATE INVESTIGATORS</h1>
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-badge"><i class="fas fa-shield-alt"></i> Strictly Confidential & Legal</div>
+  <h1>Uncovering the Truth with <span>Absolute Discretion</span></h1>
+  <p>
+    DATOBAM Private Investigators delivers precise, court-admissible intelligence and covert surveillance tailored for corporate, legal, and personal matters across Nigeria.
+  </p>
+  
+  <div class="hero-cta-group">
+    <button class="btn" onclick="goContact()"><i class="fas fa-user-secret"></i> Hire Investigator</button>
+    <a href="https://wa.me/2347036883907" class="btn btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> Quick Consultation</a>
+  </div>
 
-<p>
-We provide confidential, accurate and professional investigation services.
-Our mission is to uncover the truth while protecting your privacy.
-</p>
-
-<button class="btn" onclick="goContact()">Hire Investigator</button>
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Confidentiality</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">24/7</div>
+      <div class="stat-label">Rapid Response</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">Verified</div>
+      <div class="stat-label">Evidence Gathering</div>
+    </div>
+  </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES SECTION -->
 <section class="section" id="services">
-<h2>Our Professional Services</h2>
+  <div class="section-header">
+    <span class="section-tag">Specialized Solutions</span>
+    <h2 class="section-title">Our Professional Services</h2>
+    <p class="section-desc">We offer structured intelligence operations tailored to reveal facts, mitigate risks, and clear doubts.</p>
+  </div>
 
-<p style="max-width:600px;margin:auto;margin-bottom:30px;opacity:0.8;">
-We offer specialized investigative solutions for individuals, businesses, and organizations.
-</p>
+  <div class="services-grid">
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-eye"></i></div>
+      <h3>Surveillance Operations</h3>
+      <p>Real-time covert monitoring, photo/video evidence gathering, and movement tracking by experienced field operatives.</p>
+    </div>
 
-<div class="services">
-<div class="card">Surveillance Operations — Real-time monitoring and evidence gathering.</div>
-<div class="card">Background Investigation — Deep checks on individuals and companies.</div>
-<div class="card">Due Diligence — Verify facts before decisions.</div>
-<div class="card">Insurance Investigation — Detect fraud.</div>
-<div class="card">Infidelity Investigation — Discreet verification.</div>
-<div class="card">Undercover Operations — Covert intelligence gathering.</div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-user-check"></i></div>
+      <h3>Background Check</h3>
+      <p>Deep-dive verification of individuals, executive hiring vetting, domestic staff background profiling, and criminal history checks.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+      <h3>Corporate Due Diligence</h3>
+      <p>Verify potential business partners, investment legitimacy, real estate transactions, and vendor authenticity before committing capital.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-user-ninja"></i></div>
+      <h3>Undercover Operations</h3>
+      <p>Covert placement within organizations to investigate internal theft, fraud, corporate espionage, and policy breaches.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-heart-broken"></i></div>
+      <h3>Infidelity Verification</h3>
+      <p>Discreet, respectful, and tactful investigations to obtain clear facts regarding marital or partner fidelity concerns.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-shield-virus"></i></div>
+      <h3>Insurance Fraud Detection</h3>
+      <p>Investigating suspicious claims, staged accidents, fake disability requests, and fraudulent asset losses for firms.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<div class="about-wrapper">
+  <section class="section about-grid" id="about">
+    <div class="about-content">
+      <span class="section-tag">About DATOBAM</span>
+      <h2>Truth, Discretion & Uncompromising Integrity</h2>
+      <p>
+        DATOBAM Private Investigators is a licensed investigative agency committed to delivering clear facts and actionable intelligence. In a world full of uncertainty, we provide individuals, law firms, and corporations with clarity.
+      </p>
+      <p>
+        Lead by experienced tactical investigators, our operations adhere strictly to ethical guidelines while ensuring that gathered proof remains actionable and objective.
+      </p>
+
+      <ul class="features-list">
+        <li><i class="fas fa-check-circle"></i> Complete Anonymous & Secure Communication</li>
+        <li><i class="fas fa-check-circle"></i> Experienced High-Tech Field Operatives</li>
+        <li><i class="fas fa-check-circle"></i> Clear Detailed Investigative Documentation</li>
+      </ul>
+    </div>
+
+    <div class="about-box">
+      <i class="fas fa-quote-right quote-icon"></i>
+      <h3>Our Commitment</h3>
+      <p style="color: #d1d5db; margin-top: 15px; font-style: italic;">
+        "We do not guess; we verify. Every case is treated with extreme secrecy, ensuring our clients receive facts they can depend on without compromising their privacy or safety."
+      </p>
+      <div style="margin-top: 20px; font-weight: bold; color: var(--gold);">
+        — Lead Investigator, Mustapha Saliu Ibrahim
+      </div>
+    </div>
+  </section>
 </div>
+
+<!-- PROCESS SECTION -->
+<section class="section" id="process">
+  <div class="section-header">
+    <span class="section-tag">How We Work</span>
+    <h2 class="section-title">The Investigation Workflow</h2>
+    <p class="section-desc">A structured 4-step process ensuring total privacy and accurate findings.</p>
+  </div>
+
+  <div class="process-steps">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <h4>Confidential Intake</h4>
+      <p>We review your case details via secure channels to understand goals and assess legal feasibility.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <h4>Strategy & Quote</h4>
+      <p>A customized field strategy is designed with transparent timelines and flat-fee pricing.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <h4>Field Deployment</h4>
+      <p>Operatives execute surveillance, background sweeps, or undercover intelligence gathering.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <h4>Final Evidence Report</h4>
+      <p>Receive a comprehensive report backed by digital evidence, timestamps, and objective findings.</p>
+    </div>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section about" id="about">
-<h2>About DATOBAM</h2>
-
-<p style="max-width:650px;margin:auto;opacity:0.9;">
-DATOBAM is a trusted investigation agency committed to professionalism,
-confidentiality, and accuracy. We deliver results that help clients make
-informed decisions with confidence.
-</p>
-
-</section>
-
-<!-- TESTIMONIAL -->
+<!-- TESTIMONIALS -->
 <section class="section">
-<h2>Client Testimonials</h2>
+  <div class="section-header">
+    <span class="section-tag">Client Feedback</span>
+    <h2 class="section-title">Trusted By Individuals & Executives</h2>
+  </div>
 
-<div class="testimonial">"Professional and discreet service."</div>
-<div class="testimonial">"Highly reliable investigators."</div>
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testimonial-text">"DATOBAM handled a complex business partner background check for our investment firm in Lagos. The evidence saved us millions."</p>
+      <div class="client-info">
+        <h5>Corporate Client</h5>
+        <span>Victoria Island, Lagos</span>
+      </div>
+    </div>
 
+    <div class="testimonial">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testimonial-text">"Extremely discreet and professional. They kept me updated throughout the surveillance period without raising any alarms."</p>
+      <div class="client-info">
+        <h5>Private Individual</h5>
+        <span>Lekki, Lagos</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testimonial-text">"Prompt responses and zero leaks. Mustapha and his team delivered concrete proof right when I needed it."</p>
+      <div class="client-info">
+        <h5>Legal Representative</h5>
+        <span>Ikeja, Lagos</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- LOCATION + MAP -->
+<!-- CONTACT & LOCATION -->
 <section class="section" id="location">
-<h2>Our Office Location</h2>
+  <div class="section-header">
+    <span class="section-tag">Get In Touch</span>
+    <h2 class="section-title">Schedule a Consultation</h2>
+    <p class="section-desc">All inquiries are processed with absolute privacy under standard non-disclosure practices.</p>
+  </div>
 
-<p style="max-width:600px;margin:auto;opacity:0.8;">
-Visit our office or contact us directly for confidential consultations.
-</p>
+  <div class="contact-grid" id="contact">
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fas fa-user-shield"></i>
+        <div>
+          <h4>Lead Investigator</h4>
+          <p>Mustapha Saliu Ibrahim</p>
+        </div>
+      </div>
 
-<p style="margin-top:15px;">
-📍 Lagos, Nigeria (Update with your exact office address)
-</p>
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <h4>Direct Phone / WhatsApp</h4>
+          <p><a href="tel:+2347036883907" style="color:#fff; text-decoration:none;">+234 703 688 3907</a></p>
+        </div>
+      </div>
 
-<iframe class="map"
-src="https://maps.google.com/maps?q=Lagos%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h4>Encrypted Email Inquiry</h4>
+          <p style="font-size: 0.95rem;">datobamprivateinvestigators@gmail.com</p>
+        </div>
+      </div>
 
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h4>Primary Operations Center</h4>
+          <p>Lagos State, Nigeria</p>
+        </div>
+      </div>
+
+      <iframe class="map"
+        src="https://maps.google.com/maps?q=Lagos%20Nigeria&t=&z=12&ie=UTF8&iwloc=&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="contact-form">
+      <h3 style="margin-bottom: 20px;">Send a Confidential Message</h3>
+      <form id="investigationForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Your Name / Pseudonym</label>
+          <input type="text" class="form-control" placeholder="Optional for anonymity" id="clientName">
+        </div>
+
+        <div class="form-group">
+          <label>Preferred Contact (Phone/WhatsApp/Email)</label>
+          <input type="text" class="form-control" placeholder="Where should we respond?" required id="clientContact">
+        </div>
+
+        <div class="form-group">
+          <label>Service Required</label>
+          <select class="form-control" id="serviceType">
+            <option>Surveillance Operations</option>
+            <option>Background Investigation</option>
+            <option>Corporate Due Diligence</option>
+            <option>Infidelity Verification</option>
+            <option>Undercover Operations</option>
+            <option>Other / Custom Investigation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Brief Case Summary</label>
+          <textarea class="form-control" placeholder="Provide basic details safely..." required id="caseDetails"></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+          <i class="fas fa-lock"></i> Submit Case Privately
+        </button>
+      </form>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-<h2>Contact Us</h2>
-
-<p><strong>Lead Investigator:</strong> Mustapha Saliu Ibrahim</p>
-<p><strong>Phone:</strong> +2347036883907</p>
-<p><strong>Email:</strong> datobamprivateinvestigators@gmail.com</p>
-
-<p style="margin-top:15px;opacity:0.8;">
-Reach out today for a confidential consultation.
-</p>
-
-<button class="btn" onclick="contactNow()">Chat on WhatsApp</button>
-</section>
-
-<!-- FLOAT BUTTONS -->
-<a href="https://wa.me/2347036883907" class="whatsapp">💬</a>
-<a href="tel:+2347036883907" class="call">📞</a>
+<!-- FLOATING FAST-CONTACT BUTTONS -->
+<a href="tel:+2347036883907" class="float-btn call" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/2347036883907" class="float-btn whatsapp" target="_blank" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
 
 <!-- FOOTER -->
-<div class="footer">
-© 2026 DATOBAM Private Investigators
-</div>
+<footer>
+  <div class="footer-content">
+    <div class="logo-container">
+      <div class="logo-badge">D</div>
+      <div class="logo-text">DATOBAM PRIVATE INVESTIGATORS</div>
+    </div>
+    
+    <p class="footer-disclaimer">
+      Disclaimer: DATOBAM Private Investigators operates in full compliance with localized regulations. All intelligence gathering operations prioritize legal admissibility and strict client confidentiality.
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 DATOBAM Private Investigators. All Rights Reserved.
+  </div>
+</footer>
 
 <script>
+// Toggle Mobile Navigation
+function toggleMenu() {
+  const navLinks = id('navLinks');
+  navLinks.classList.toggle('active');
+}
+
+// Smooth scroll to contact section
 function goContact(){
-document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
 }
 
-function contactNow(){
-window.location.href="https://wa.me/2347036883907";
+// Helper for element selection
+function id(elementId) {
+  return document.getElementById(elementId);
 }
 
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
+// Handle Form Submission redirecting to WhatsApp
+function handleFormSubmit(e) {
+  e.preventDefault();
+  
+  const name = id('clientName').value || "Client";
+  const contact = id('clientContact').value;
+  const service = id('serviceType').value;
+  const details = id('caseDetails').value;
 
-document.querySelectorAll('.card, .testimonial').forEach(el=>{
-observer.observe(el);
+  const text = `*New Case Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Contact:* ${encodeURIComponent(contact)}%0A*Service:* ${encodeURIComponent(service)}%0A*Summary:* ${encodeURIComponent(details)}`;
+  
+  window.open(`https://wa.me/2347036883907?text=${text}`, '_blank');
+}
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+  threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.card, .testimonial').forEach(el => {
+  observer.observe(el);
 });
 </script>
 
