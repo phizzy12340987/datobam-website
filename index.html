@@ -7,17 +7,48 @@
 <title>DATOBAM Private Investigators</title>
 
 <style>
+:root{
+--gold:#facc15;
+--dark:#0b0f1a;
+--card:#111827;
+}
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family: "Segoe UI", Arial, sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#0b0f1a;
+background:var(--dark);
 color:#fff;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+z-index:1000;
+}
+
+nav img{
+width:40px;
+}
+
+nav a{
+color:#fff;
+margin-left:15px;
+text-decoration:none;
+font-size:14px;
 }
 
 /* ===== HERO ===== */
@@ -30,22 +61,18 @@ align-items:center;
 text-align:center;
 padding:20px;
 background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
-url('https://images.unsplash.com/photo-1502920917128-1aa500764cbd');
+url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d');
 background-size:cover;
-}
-
-.hero img{
-width:120px;
-margin-bottom:15px;
-border-radius:50%;
+background-position:center;
 }
 
 .hero h1{
-color:#facc15;
-font-size:32px;
+font-size:36px;
+color:var(--gold);
 }
 
 .hero p{
+max-width:400px;
 opacity:0.8;
 margin-top:10px;
 }
@@ -53,22 +80,24 @@ margin-top:10px;
 .btn{
 margin-top:20px;
 padding:12px 25px;
-background:#facc15;
+background:var(--gold);
 color:#000;
 border:none;
 border-radius:30px;
 font-weight:bold;
+cursor:pointer;
 }
 
 /* ===== SECTION ===== */
 .section{
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
 .section h2{
-color:#facc15;
+color:var(--gold);
 margin-bottom:20px;
+font-size:26px;
 }
 
 /* ===== SERVICES ===== */
@@ -78,9 +107,29 @@ gap:15px;
 }
 
 .card{
-background:#111827;
+background:var(--card);
 padding:20px;
 border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* ===== GRID ===== */
+@media(min-width:768px){
+.services{
+grid-template-columns:1fr 1fr;
+}
+.hero h1{
+font-size:48px;
+}
+}
+
+/* ===== ABOUT ===== */
+.about{
+background:#020617;
 }
 
 /* ===== WHY ===== */
@@ -88,13 +137,13 @@ border-radius:10px;
 background:#020617;
 }
 
-.why-box{
+.why-item{
 margin:10px 0;
 }
 
 /* ===== TESTIMONIAL ===== */
 .testimonial{
-background:#111827;
+background:var(--card);
 padding:20px;
 border-radius:10px;
 margin:10px 0;
@@ -110,7 +159,7 @@ background:#020617;
 margin:8px 0;
 }
 
-/* ===== FLOAT BUTTON ===== */
+/* ===== FLOAT BUTTONS ===== */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -119,20 +168,18 @@ background:#25D366;
 color:#fff;
 padding:15px;
 border-radius:50%;
-font-size:20px;
 text-decoration:none;
+font-size:18px;
 }
 
-/* ===== CALL BUTTON ===== */
 .call{
 position:fixed;
 bottom:80px;
 right:20px;
-background:#facc15;
+background:var(--gold);
 color:#000;
 padding:15px;
 border-radius:50%;
-font-size:18px;
 text-decoration:none;
 }
 
@@ -143,23 +190,24 @@ padding:20px;
 font-size:13px;
 opacity:0.6;
 }
-
-@media(min-width:768px){
-.services{
-grid-template-columns:1fr 1fr;
-}
-.hero h1{
-font-size:40px;
-}
-}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+<img src="logo.png">
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
 <!-- HERO -->
 <section class="hero">
-<img src="logo.jpg" alt="DATOBAM Logo">
 <h1>DATOBAM</h1>
 <p>Private Investigators<br>
 Discretion is our Strength. Truth is our Mission.</p>
@@ -167,53 +215,44 @@ Discretion is our Strength. Truth is our Mission.</p>
 </section>
 
 <!-- SERVICES -->
-<section class="section">
+<section class="section" id="services">
 <h2>Our Services</h2>
 
 <div class="services">
-
 <div class="card">Surveillance</div>
 <div class="card">Background Investigation</div>
 <div class="card">Due Diligence</div>
 <div class="card">Insurance Investigation</div>
 <div class="card">Infidelity Check</div>
 <div class="card">Undercover Operations</div>
-
 </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section">
+<section class="section about" id="about">
 <h2>About Us</h2>
 <p>
-DATOBAM Private Investigators provide discreet,
-accurate and professional intelligence services across Nigeria and beyond.
-We protect your privacy and deliver truth with confidence.
+DATOBAM Private Investigators deliver discreet, reliable,
+and professional investigation services across Nigeria and beyond.
+We prioritize confidentiality and accuracy in every case.
 </p>
 </section>
 
 <!-- WHY -->
 <section class="section why">
 <h2>Why Choose Us</h2>
-
-<div class="why-box">✔ 100% Confidential</div>
-<div class="why-box">✔ Accurate & Reliable</div>
-<div class="why-box">✔ Fast Response</div>
-<div class="why-box">✔ Professional Team</div>
-
+<div class="why-item">✔ 100% Confidential</div>
+<div class="why-item">✔ Accurate & Trusted</div>
+<div class="why-item">✔ Fast & Reliable</div>
+<div class="why-item">✔ Professional Team</div>
 </section>
 
 <!-- TESTIMONIAL -->
 <section class="section">
 <h2>Client Feedback</h2>
 
-<div class="testimonial">
-"Very discreet and professional. Highly recommended."
-</div>
-
-<div class="testimonial">
-"They delivered results faster than expected."
-</div>
+<div class="testimonial">"Professional and discreet service."</div>
+<div class="testimonial">"Highly reliable investigators."</div>
 
 </section>
 
@@ -225,7 +264,7 @@ We protect your privacy and deliver truth with confidence.
 <p><strong>Phone:</strong> +2347036883907</p>
 <p><strong>Email:</strong> datobamprivateinvestigators@gmail.com</p>
 
-<button class="btn" onclick="contactNow()">Message on WhatsApp</button>
+<button class="btn" onclick="contactNow()">WhatsApp Now</button>
 </section>
 
 <!-- FLOAT BUTTONS -->
@@ -239,9 +278,7 @@ We protect your privacy and deliver truth with confidence.
 
 <script>
 function goContact(){
-document.getElementById("contact").scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("contact").scrollIntoView({behavior:"smooth"});
 }
 
 function contactNow(){
