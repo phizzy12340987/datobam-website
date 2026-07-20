@@ -43,7 +43,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 5%;
+      padding: 14px 5%;
       background: rgba(11, 15, 26, 0.90);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -53,22 +53,29 @@
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
       color: #fff;
     }
 
+    .logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
     .logo-badge {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       background: var(--gold);
       color: var(--dark);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 1.2rem;
-      border-radius: 8px;
+      font-size: 1.1rem;
+      border-radius: 6px;
       flex-shrink: 0;
     }
 
@@ -383,10 +390,11 @@
 
   <!-- NAVIGATION -->
   <nav>
-  <a href="#" class="logo-container">
-    <img src="logo.jpg" alt="DATOBAM Logo" class="logo-img">
-    <span class="logo-text">DATOBAM</span>
-  </a>
+    <a href="index.html" class="logo-container" aria-label="DATOBAM Homepage">
+      <img src="logo.jpg" alt="DATOBAM Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="logo-badge" style="display: none;">D</div>
+      <span class="logo-text">DATOBAM</span>
+    </a>
 
     <button class="mobile-menu-btn" id="menuToggleBtn" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">
       <i class="fas fa-bars"></i>
@@ -394,11 +402,11 @@
 
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="index.html#services">Services</a>
+      <a href="services.html">Services</a>
       <a href="about.html" class="active">About</a>
-      <a href="index.html#process">Our Process</a>
-      <a href="index.html#location">Location</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="process.html">Our Process</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -489,10 +497,11 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-content">
-      <div class="logo-container">
-        <div class="logo-badge">D</div>
+      <a href="index.html" class="logo-container">
+        <img src="logo.jpg" alt="DATOBAM Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="logo-badge" style="display: none;">D</div>
         <div class="logo-text">DATOBAM PRIVATE INVESTIGATORS</div>
-      </div>
+      </a>
       
       <p class="footer-disclaimer">
         Disclaimer: DATOBAM Private Investigators operates in full compliance with localized regulations. All intelligence gathering operations prioritize legal admissibility and strict client confidentiality.
