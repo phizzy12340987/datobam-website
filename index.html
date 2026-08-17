@@ -555,6 +555,141 @@ nav a:hover {
   color: var(--text-muted);
 }
 
+/* AUTO-SCROLLING VIDEO SHOWCASE SECTION */
+.video-showcase-section {
+  padding: 80px 0;
+  background: #020617;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.video-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Soft Edge Blending */
+.video-slider-container::before,
+.video-slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.video-slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #020617, transparent);
+}
+
+.video-slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #020617, transparent);
+}
+
+/* Infinite Scrolling Track */
+.video-track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: continuousScroll 35s linear infinite;
+}
+
+/* Pause Scrolling on Hover */
+.video-slider-container:hover .video-track {
+  animation-play-state: paused;
+}
+
+@keyframes continuousScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.video-card {
+  width: 320px;
+  height: 220px;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--gold);
+  box-shadow: 0 15px 30px rgba(250, 204, 21, 0.25);
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video Overlay Styling */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(11, 15, 26, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.video-badge {
+  align-self: flex-start;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border);
+  color: var(--gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+}
+
+.video-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.play-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gold);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+  flex-shrink: 0;
+}
+
+.video-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
 /* CONTACT & LOCATION */
 .contact-grid {
   display: grid;
@@ -748,6 +883,11 @@ footer {
     flex-direction: column;
     gap: 25px;
   }
+
+  .video-card {
+    width: 260px;
+    height: 180px;
+  }
 }
 </style>
 </head>
@@ -770,6 +910,7 @@ footer {
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
     <a href="process.html">Our Process</a>
+    <a href="#showcase">Showcase</a>
     <a href="location.html">Location</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -964,6 +1105,178 @@ footer {
         <h5>Legal Representative</h5>
         <span>Ikeja, Lagos</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTO-SCROLLING VIDEO SHOWCASE SECTION -->
+<section class="video-showcase-section" id="showcase">
+  <div class="section-header">
+    <span class="section-tag">OPERATIONAL FOOTAGE</span>
+    <h2 class="section-title">Intelligence & Tactical Operations</h2>
+    <p class="section-desc">A glimpse into high-tech surveillance, digital forensics, and tactical field deployments.</p>
+  </div>
+
+  <div class="video-slider-container">
+    <div class="video-track">
+      <!-- Set 1: 6 Video Cards -->
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-security-camera-recording-a-corridor-41528-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">SURVEILLANCE</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Covert Premises Monitoring</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-typing-on-a-computer-keyboard-41183-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">CYBER FORENSICS</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Digital Data Tracing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1508873696983-2df515122519?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-car-driving-in-a-city-at-night-4158-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">MOBILE TRACKING</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Nighttime Vehicle Surveillance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-and-data-41538-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">INTELLIGENCE</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Background Verification</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-city-buildings-and-skyscrapers-41549-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">CORPORATE</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Corporate Due Diligence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-person-working-on-a-laptop-in-a-dark-room-42283-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">ANONYMOUS</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Encrypted Evidence Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Set 2: Duplicate set for seamless continuous infinite looping -->
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-security-camera-recording-a-corridor-41528-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">SURVEILLANCE</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Covert Premises Monitoring</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-typing-on-a-computer-keyboard-41183-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">CYBER FORENSICS</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Digital Data Tracing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1508873696983-2df515122519?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-car-driving-in-a-city-at-night-4158-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">MOBILE TRACKING</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Nighttime Vehicle Surveillance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-and-data-41538-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">INTELLIGENCE</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Background Verification</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-city-buildings-and-skyscrapers-41549-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">CORPORATE</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Corporate Due Diligence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-person-working-on-a-laptop-in-a-dark-room-42283-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span class="video-badge">ANONYMOUS</span>
+          <div class="video-info">
+            <div class="play-icon"><i class="fas fa-play"></i></div>
+            <span class="video-title">Encrypted Evidence Analysis</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
