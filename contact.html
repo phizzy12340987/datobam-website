@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact DATOBAM Private Investigators - Secure, confidential inquiries for surveillance, background checks, and intelligence gathering in Nigeria.">
+  <meta property="og:title" content="Contact Us | DATOBAM Private Investigators">
+  <meta property="og:description" content="Direct, confidential access to licensed private investigators in Lagos, Nigeria. Reach out safely.">
+  <meta property="og:type" content="website">
   <title>Contact Us | DATOBAM Private Investigators</title>
 
-  <!-- Font Awesome for agency icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -70,7 +73,7 @@
       height: 36px;
       background: var(--gold);
       color: var(--dark);
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       font-weight: 800;
@@ -139,7 +142,7 @@
       font-size: 1.1rem;
     }
 
-    /* SECTION COMMON */
+    /* SECTIONS */
     .section {
       padding: 80px 5%;
       max-width: 1200px;
@@ -179,7 +182,7 @@
       font-size: 0.9rem;
     }
 
-    /* CONTACT SECTION GRID */
+    /* CONTACT GRID */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -200,11 +203,12 @@
       padding: 20px;
       border-radius: 10px;
       border: 1px solid rgba(255,255,255,0.03);
-      transition: border-color 0.3s ease;
+      transition: border-color 0.3s ease, transform 0.3s ease;
     }
 
     .info-item:hover {
       border-color: var(--border);
+      transform: translateY(-2px);
     }
 
     .info-item i {
@@ -226,6 +230,7 @@
       word-break: break-word;
     }
 
+    /* FORM STYLES */
     .contact-form {
       background: var(--card);
       padding: 35px;
@@ -406,7 +411,7 @@
   <nav>
     <a href="index.html" class="logo-container" aria-label="DATOBAM Homepage">
       <img src="logo.jpg" alt="DATOBAM Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="logo-badge" style="display: none;">D</div>
+      <div class="logo-badge">D</div>
       <span class="logo-text">DATOBAM</span>
     </a>
 
@@ -542,7 +547,7 @@
     <div class="footer-content">
       <a href="index.html" class="logo-container">
         <img src="logo.jpg" alt="DATOBAM Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="logo-badge" style="display: none;">D</div>
+        <div class="logo-badge">D</div>
         <div class="logo-text">DATOBAM PRIVATE INVESTIGATORS</div>
       </a>
       
